@@ -1,37 +1,36 @@
 <?php
-    require_once("d://laragon/www/login/view/head/head.php");
+    require_once("c://laragon/www/login/view/head/head.php");
     if(!empty($_SESSION["user"])){
         header("Location:panelControl.php");
     }
 ?>
 
 <div class="content_login">
-    <div class="icon">
-        <a href="/login/index.php">
-        <i class="fas fa-cat cat-icon"></i>
-        </a>
-    </div>
-    <div class="title">
-        Registrate en IntegraTech
+    <div class="mt-0 title text-center">
+        Registrate en Inventa System
     </div>
     <form id="signupForm" class="col-4 login" autocomplete="off">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="name" class="form-label">Nombre Completo</label>
+            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+            <label for="email" class="form-label">Correo Electronico</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Clave</label>
             <div class="box_eye">
-                <button type="button" onclick="showPassword('password','eye-password')">
+                <button type="button" class="show_pass" onclick="showPassword('password','eye-password')">
                     <i id="eye-password" class="fas fa-eye change_password"></i>
                 </button>
             </div>
             <input type="password" name="passwords" class="form-control" id="password">
         </div>
         <div class="mb-3">
-            <label for="confirmPassword" class="form-label">Repeat Password</label>
+            <label for="confirmPassword" class="form-label">Repetir Clave</label>
             <div class="box_eye">
-                <button type="button" onclick="showPassword('confirmPassword','eye-password2')">
+                <button type="button" class="show_pass" onclick="showPassword('confirmPassword','eye-password2')">
                     <i id="eye-password2" class="fas fa-eye change_password"></i>
                 </button>
             </div>
@@ -42,10 +41,10 @@
         </div>
     </form>
     <div class="col-4 login mt-4">
-        Tienes una cuenta? <a href="login.php">Inicia Sesion</a>
+        Tienes una cuenta? <a href="login.php" class="links">Inicia Sesion</a>
     </div>
 </div>
 
 <?php
-    require_once("d://laragon/www/login/view/head/footer.php");
+    require_once("c://laragon/www/login/view/head/footer.php");
 ?>

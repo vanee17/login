@@ -4,48 +4,116 @@
     box-sizing: border-box;
 }
 
+/*generales*/
+
+:root{
+    --color1: #1e2631;
+    --color2: #95bff5;
+    --color3: #f0f8ff ;
+}
+
+.color1{
+    color: var(--color1);
+}
+
+.color2{
+    color:var(--color2);
+}
+
+.color3{
+    color:var(--color3);
+}
+
+.bcolor1{
+    background-color: var(--color1);
+}
+
+.bcolor2{
+    background-color: var(--color2);
+}
+
+.bcolor3{
+    background-color: var(--color3);
+}
+
+.comb1{
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.comb2{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+/* .div_title{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+} */
+.btn1{
+    background-color: var(--color2);
+    color: var(--color1);
+    width: 100%;
+}
+
+.div_button{
+    margin-top: 8rem;
+}
+
 .button{
-    color: aliceblue;
-    border: 1px solid aliceblue;
+    color: var(--color2);
+    border: 1px solid var(--color2);
     text-decoration: none;
-    padding: 6px 10px;
     border-radius: 8px;
     transition: .2s;
+    width: 100%;
+    margin-right: 30px;
+    text-align: center;
+    padding: 8px;
 }
 
 .button:hover{
-    border: 1px solid gray;
-    color: gray;
+    border: 1px solid var(--color3);
+    color: var(--color3);
 }
 
 .content_login{
-    background-color: rgba(0, 0, 0, 0.938);
     min-height: 100vh;
-    padding-top: 40px;
+    padding-top: 15px;
+    background: rgb(30,38,49);
+    background: linear-gradient(127deg, rgba(30,38,49,1) 0%, rgba(39,50,65,1) 29%, rgba(44,56,73,1) 50%, rgba(49,63,82,1) 56%, rgba(59,76,99,1) 63%, rgba(67,86,112,1) 68%, rgba(89,115,148,1) 77%, rgba(106,136,175,1) 83%, rgba(128,164,210,1) 90%, rgba(149,191,245,1) 95%, rgba(240,248,255,1) 100%); 
 }
 
 .login{
-    color: aliceblue;
+    color: var(--color3);
     margin: auto;
-    border: 1px solid grey;
+    background-color: #95bff538;
     padding: 20px;
     border-radius: 6px;
-    background-color: rgb(51, 47, 47);
 }
 
-.icon, .title{
-    text-align: center;
-    color: aliceblue;
+.form-control{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    color: var(--color2);
 }
 
+.form-control:focus{
+    background-color: transparent;
+    color: var(--color2);
+    border-color: var(--color1);
+    box-shadow: none !important;
+    outline: 0 none;
+}
 .title{
     margin-bottom: 12px;
-}
-
-.icon, .cat-icon{
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: aliceblue;
+    color: var(--color2);
+    margin-top: -2rem;
 }
 
 .box_eye{
@@ -57,9 +125,78 @@
     position: absolute;
 }
 
+.show_pass{
+    right: 21px;
+}
+
 .change_password{
     position: absolute;
-    top: 12px;
-    left: 380px;
+    top: 10px;
     cursor: pointer;
+    color: var(--color2);
 }
+.links{
+    color: var(--color2);
+}
+
+
+/*diseño sidebar*/
+
+.sidebar{
+    background-color: var(--color1);
+}
+.l_navbar{
+    color: var(--color2);
+    font-size: 1.2vw;
+}
+
+
+/*diseño panel control*/
+.p_grid{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.img_pc{
+    width: 115px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.card{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: #95bff521;
+}
+
+.card:hover{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+/*diseño modal proveedores*/
+
+.form-prov{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    color: var(--color1);
+}
+
+.form-prov:focus{
+    background-color: transparent;
+    color: var(--color1);
+    border-color: var(--color2);
+    box-shadow: none !important;
+    outline: 0 none;
+}
+
+/* diseño de facturacion */
+
+.checkin {
+    background-color: dimgray;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
